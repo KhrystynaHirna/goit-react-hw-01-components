@@ -1,20 +1,27 @@
- 
-export const ProfileStats = (stats) => {
+import PropTypes from "prop-types";
+import user from '../social-profile/user.json'
+
+export const ProfileStats = () => {
     return (
-        <ul class="stats">
+        <ul className="stats">
             <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{stats}</span>
+                <span className="label">{user.stats.label}</span>
+                <span className="quantity">{user.stats.quantity}</span>
             </li>
             <li>
-                <span className="label">Views</span>
-                <span className="quantity">{stats}</span>
+                <span className="label">{user.stats.label}</span>
+                <span className="quantity">{user.stats.quantity}</span>
             </li>
             <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{stats}</span>
+                <span className="label">{user.stats.label}</span>
+                <span className="quantity">{user.stats.quantity}</span>
             </li>
-        </ul>
+  </ul>
     )
-}
+};
+
+ProfileStats.propTypes = {
+    label: PropTypes.string,
+    quantity: PropTypes.number,
+};
 
