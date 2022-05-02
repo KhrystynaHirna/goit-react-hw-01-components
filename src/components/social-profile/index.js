@@ -1,1 +1,1 @@
-// export { Profile } './Profile';
+export { Profile } from './Profile';
