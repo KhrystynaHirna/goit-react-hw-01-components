@@ -1,36 +1,35 @@
 
 import PropTypes from "prop-types";
-
+import s from "./Profile.module.css";
 
 // username, tag, location, avatar, stats - ce propsy (wlastywosti) komponenta ProfileDescription,
 // jaki je objectom i destrukturyzowani w pidpysi function
 
 export const Profile = ({ username, tag, location, avatar, stats}) => {
     return (
-        <div className="profile">
-         <div className="description">
-            <img
+        <div className={s.profile}>
+            <div className={s.description}>
+            <img className={s.avatar} width="250" height="250"
                 src={avatar}
                 alt={username}
-                className="avatar"
             />
-            <p className="name">{username}</p>
-            <p className="tag">@{tag}</p>
-            <p className="location">{location}</p>
+            <p className={s.name}>{username}</p>
+            <p className={s.tag}>@{tag}</p>
+            <p className={s.tag}>{location}</p>
         </div>
             
-         <ul className="stats">
-            <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{stats.followers}</span>
+            <ul className={s.stats}>
+            <li className={s.statsItem}>
+                    <span className={s.label}>Followers</span>
+                    <span className={s.quantity}>{stats.followers}</span>
             </li>
-            <li>
-                <span className="label">Views</span>
-                <span className="quantity">{stats.views}</span>
+            <li className={s.statsItem}>
+                <span className={s.label}>Views</span>
+                <span className={s.quantity}>{stats.views}</span>
             </li>
-            <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{stats.likes}</span>
+            <li className={s.statsItem}>
+                <span className={s.label}>Likes</span>
+                <span className={s.quantity}>{stats.likes}</span>
             </li>
         </ul>
             
